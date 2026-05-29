@@ -34,10 +34,10 @@ st.json({
 
 col1, col2 = st.columns(2)
 with col1:
-    st.subheader('Is this Sara?')
+    st.subheader('Is this Sara????')
 
 with col2:
-    st.image('img.jpg')
+    st.image('img2.jpg')
 
 st.subheader('Sara ka dimag dekhna h?' '\n')
 # ans = st.text_input('Enter yes or no')
@@ -50,7 +50,7 @@ if ans:
     for i in range(1,101):
         time.sleep(0.2)
         bar.progress(i)
-        if (i==50):
+        if (i==80):
             time.sleep(3)
             st.error('Oops! itna hi dimag h bs')
             break
@@ -61,3 +61,15 @@ elif ans2:
 st.sidebar.title('Hmari website ka Title')
 st.sidebar.markdown('Kartootein')
 
+s = st.selectbox('Select your level', ['Bhut pagal', 'sbse bdi pagal', 'alg level ki pagal'])
+
+# file = st.file_uploader('Upload your image')
+
+b = st.button('continue beizzati?')
+if b:
+    st.button(f'Kya apko pta h {s} ullu bhi h?')
+b2 = st.button('No stop now')
+if b2:
+    st.write('Are ye rhii sara, urf CHIPKALI')
+    st.image('img.jpg')
+    st.warning('Abhi bhi continue rhegi LOL')
